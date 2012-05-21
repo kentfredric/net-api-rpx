@@ -32,19 +32,11 @@ sub _explanation {
     $self->required_parameter, $self->_signature_string;
 }
 
-=head1 METHODS
+around message => sub {
+	my ( $orig, $self, @args ) = @_;
+	return $self->$orig(@args) . qq{\n} . $self->_explanation;
+};
 
-=head2 full_message
-
-Overrides Exception::Class::Base 's stringification that is applied to the top of the backtrace.
-
-=cut
-
-sub full_message {
-  my $self = shift;
-  my $msg  = $self->message . qq{\n} . $self->_explanation;
-  return $msg;
-}
-__PACKAGE__->meta->make_immutable();
+__PACKAGE__->_immutable;
 1;
 

@@ -25,7 +25,7 @@ Auth_Info: {
   ok( !$result, 'expected auth_info fail' );
   isa_ok( $error, 'Net::API::RPX::Exception' );
   isa_ok( $error, 'Net::API::RPX::Exception::Usage' );
-  is( $error->message,            'Token is required', '->message' );
+  like( $error->message,            qr/^Token is required/, '->message' );
   is( $error->method_name,        '->auth_info',       '->method_name' );
   is( $error->package,            'Net::API::RPX',     '->package' );
   is( $error->required_parameter, 'token',             '->required_parameter' );
@@ -48,7 +48,7 @@ Map: {
   ok( !$result, 'expected map fail' );
   isa_ok( $error, 'Net::API::RPX::Exception' );
   isa_ok( $error, 'Net::API::RPX::Exception::Usage' );
-  is( $error->message,            'Identifier is required', '->message' );
+  like( $error->message,            qr/^Identifier is required/, '->message' );
   is( $error->method_name,        '->map',                  '->method_name' );
   is( $error->package,            'Net::API::RPX',          '->package' );
   is( $error->required_parameter, 'identifier',             '->required_parameter' );
@@ -58,7 +58,7 @@ Map: {
   ok( !$result, 'expected map fail' );
   isa_ok( $error, 'Net::API::RPX::Exception' );
   isa_ok( $error, 'Net::API::RPX::Exception::Usage' );
-  is( $error->message,            'Primary Key is required', '->message' );
+  like( $error->message,            qr/^Primary Key is required/, '->message' );
   is( $error->method_name,        '->map',                   '->method_name' );
   is( $error->package,            'Net::API::RPX',           '->package' );
   is( $error->required_parameter, 'primary_key',             '->required_parameter' );
@@ -78,7 +78,7 @@ Unmap: {
   ok( !$result, 'expected unmap fail' );
   isa_ok( $error, 'Net::API::RPX::Exception' );
   isa_ok( $error, 'Net::API::RPX::Exception::Usage' );
-  is( $error->message,            'Identifier is required', '->message' );
+  like( $error->message,            qr/^Identifier is required/, '->message' );
   is( $error->method_name,        '->unmap',                '->method_name' );
   is( $error->package,            'Net::API::RPX',          '->package' );
   is( $error->required_parameter, 'identifier',             '->required_parameter' );
@@ -88,7 +88,7 @@ Unmap: {
   ok( !$result, 'expected unmap fail' );
   isa_ok( $error, 'Net::API::RPX::Exception' );
   isa_ok( $error, 'Net::API::RPX::Exception::Usage' );
-  is( $error->message,            'Primary Key is required', '->message' );
+  like( $error->message,            qr/^Primary Key is required/, '->message' );
   is( $error->method_name,        '->unmap',                 '->method_name' );
   is( $error->package,            'Net::API::RPX',           '->package' );
   is( $error->required_parameter, 'primary_key',             '->required_parameter' );
@@ -107,7 +107,7 @@ Mappings: {
   ok( !$result, 'expected mappings fail' );
   isa_ok( $error, 'Net::API::RPX::Exception' );
   isa_ok( $error, 'Net::API::RPX::Exception::Usage' );
-  is( $error->message,            'Primary Key is required', '->message' );
+  like( $error->message,            qr/^Primary Key is required/, '->message' );
   is( $error->method_name,        '->mappings',              '->method_name' );
   is( $error->package,            'Net::API::RPX',           '->package' );
   is( $error->required_parameter, 'primary_key',             '->required_parameter' );

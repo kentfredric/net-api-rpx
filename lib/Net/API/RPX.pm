@@ -107,6 +107,7 @@ auth_info to verify the authenticity of the token and gain user details.
 sub auth_info {
   my ( $self, $opts ) = @_;
   Net::API::RPX::Exception::Usage->throw(
+	ident			   => 'auth_info_usage_needs_token',
     message            => "Token is required",
     required_parameter => 'token',
     method_name        => '->auth_info',
@@ -129,6 +130,7 @@ This method allows you to map more than one 'identifier' to a user.
 sub map {
   my ($self, $opts) = @_;
   Net::API::RPX::Exception::Usage->throw(
+	ident => 'map_usage_needs_identifier',
     message => "Identifier is required",
     required_parameter => 'identifier',
     method_name => '->map',
@@ -137,6 +139,7 @@ sub map {
   ) if !exists $opts->{identifier};
 
    Net::API::RPX::Exception::Usage->throw(
+	ident   => 'map_usage_needs_primary_key',
     message => "Primary Key is required",
     required_parameter => 'primary_key',
     method_name => '->map',
@@ -161,6 +164,7 @@ This is the inverse of 'map'.
 sub unmap {
   my ($self, $opts) = @_;
   Net::API::RPX::Exception::Usage->throw(
+	ident   => 'unmap_usage_needs_identifier',
     message => "Identifier is required",
     required_parameter => 'identifier',
     method_name => '->unmap',
@@ -169,6 +173,7 @@ sub unmap {
   ) if !exists $opts->{identifier};
 
    Net::API::RPX::Exception::Usage->throw(
+	ident => 'unmap_usage_needs_primay_key',
     message => "Primary Key is required",
     required_parameter => 'primary_key',
     method_name => '->unmap',
@@ -194,6 +199,7 @@ This method returns information about the identifiers associated with a user.
 sub mappings {
   my ($self, $opts) = @_;
   Net::API::RPX::Exception::Usage->throw(
+	ident => 'mappings_usage_needs_primary_key',
     message => "Primary Key is required",
     required_parameter => 'primary_key',
     method_name => '->mappings',
@@ -228,6 +234,7 @@ sub _fetch {
 
   if(!$res->is_success){
     Net::API::RPX::Exception::Network->throw(
+		ident => '_fetch_network_failure',
         message =>  "Could not contact RPX: " . $res->status_line(),
         ua_result => $res,
         status_line => $res->status_line,
@@ -238,6 +245,7 @@ sub _fetch {
   if($data->{'stat'} ne 'ok'){
     my $err = $data->{'err'};
     Net::API::RPX::Exception::Service->throw(
+		ident => '_fetch_service_error',
         data => $data,
         status => $data->{'stat'},
         rpx_error => $data->{'err'},
