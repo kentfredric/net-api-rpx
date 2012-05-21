@@ -21,38 +21,38 @@ Version 0.01
 our $VERSION = '0.01';
 
 has api_key => (
-    is => 'rw',
-    isa => 'Str',
+    is       => 'rw',
+    isa      => 'Str',
     required => 1,
 );
 
 has base_url => (
-    is => 'rw',
-    isa => 'Str',
+    is       => 'rw',
+    isa      => 'Str',
     required => 1,
-    lazy => 1,
-    default => 'https://rpxnow.com/api/v2/',
+    lazy     => 1,
+    default  => 'https://rpxnow.com/api/v2/',
 );
 
 has ua => (
-    is => 'rw',
-    isa => 'Object',
+    is       => 'rw',
+    isa      => 'Object',
     required => 1,
-    lazy => 1,
-    builder => '_build_ua',
+    lazy     => 1,
+    builder  => '_build_ua',
 );
 
 sub _build_ua {
     my ($self) = @_;
-    return LWP::UserAgent->new(agent => $self->_agent_string);
+    return LWP::UserAgent->new( agent => $self->_agent_string );
 }
 
 has _agent_string => (
-    is => 'rw',
-    isa => 'Str',
+    is       => 'rw',
+    isa      => 'Str',
     required => 1,
-    lazy => 1,
-    default => sub { "net-api-rpx-perl/$VERSION" },
+    lazy     => 1,
+    default  => sub { "net-api-rpx-perl/$VERSION" },
 );
 
 =head1 SYNOPSIS
@@ -105,16 +105,16 @@ auth_info to verify the authenticity of the token and gain user details.
 =cut
 
 sub auth_info {
-  my ( $self, $opts ) = @_;
-  Net::API::RPX::Exception::Usage->throw(
-	ident			   => 'auth_info_usage_needs_token',
-    message            => "Token is required",
-    required_parameter => 'token',
-    method_name        => '->auth_info',
-    package            => __PACKAGE__,
-    signature          => '{ token => $authtoken }',
-  ) if !exists $opts->{token};
-  return $self->_fetch( 'auth_info', $opts );
+    my ( $self, $opts ) = @_;
+    Net::API::RPX::Exception::Usage->throw(
+        ident              => 'auth_info_usage_needs_token',
+        message            => "Token is required",
+        required_parameter => 'token',
+        method_name        => '->auth_info',
+        package            => __PACKAGE__,
+        signature          => '{ token => $authtoken }',
+    ) if !exists $opts->{token};
+    return $self->_fetch( 'auth_info', $opts );
 }
 
 =head2 map
@@ -128,27 +128,27 @@ This method allows you to map more than one 'identifier' to a user.
 =cut
 
 sub map {
-  my ($self, $opts) = @_;
-  Net::API::RPX::Exception::Usage->throw(
-	ident => 'map_usage_needs_identifier',
-    message => "Identifier is required",
-    required_parameter => 'identifier',
-    method_name => '->map',
-    package => __PACKAGE__,
-    signature  => '{ identifier => \'some.open.id\', primary_key => 12 }',
-  ) if !exists $opts->{identifier};
+    my ( $self, $opts ) = @_;
+    Net::API::RPX::Exception::Usage->throw(
+        ident              => 'map_usage_needs_identifier',
+        message            => "Identifier is required",
+        required_parameter => 'identifier',
+        method_name        => '->map',
+        package            => __PACKAGE__,
+        signature => '{ identifier => \'some.open.id\', primary_key => 12 }',
+    ) if !exists $opts->{identifier};
 
-   Net::API::RPX::Exception::Usage->throw(
-	ident   => 'map_usage_needs_primary_key',
-    message => "Primary Key is required",
-    required_parameter => 'primary_key',
-    method_name => '->map',
-    package => __PACKAGE__,
-    signature  => '{ identifier => \'some.open.id\', primary_key => 12 }',
-  ) if !exists $opts->{primary_key};
-  $opts->{primaryKey} = delete $opts->{primary_key};
+    Net::API::RPX::Exception::Usage->throw(
+        ident              => 'map_usage_needs_primary_key',
+        message            => "Primary Key is required",
+        required_parameter => 'primary_key',
+        method_name        => '->map',
+        package            => __PACKAGE__,
+        signature => '{ identifier => \'some.open.id\', primary_key => 12 }',
+    ) if !exists $opts->{primary_key};
+    $opts->{primaryKey} = delete $opts->{primary_key};
 
-  return $self->_fetch('map', $opts);
+    return $self->_fetch( 'map', $opts );
 }
 
 =head2 unmap
@@ -162,28 +162,28 @@ This is the inverse of 'map'.
 =cut
 
 sub unmap {
-  my ($self, $opts) = @_;
-  Net::API::RPX::Exception::Usage->throw(
-	ident   => 'unmap_usage_needs_identifier',
-    message => "Identifier is required",
-    required_parameter => 'identifier',
-    method_name => '->unmap',
-    package => __PACKAGE__,
-    signature  => '{ identifier => \'some.open.id\', primary_key => 12 }',
-  ) if !exists $opts->{identifier};
+    my ( $self, $opts ) = @_;
+    Net::API::RPX::Exception::Usage->throw(
+        ident              => 'unmap_usage_needs_identifier',
+        message            => "Identifier is required",
+        required_parameter => 'identifier',
+        method_name        => '->unmap',
+        package            => __PACKAGE__,
+        signature => '{ identifier => \'some.open.id\', primary_key => 12 }',
+    ) if !exists $opts->{identifier};
 
-   Net::API::RPX::Exception::Usage->throw(
-	ident => 'unmap_usage_needs_primay_key',
-    message => "Primary Key is required",
-    required_parameter => 'primary_key',
-    method_name => '->unmap',
-    package => __PACKAGE__,
-    signature  => '{ identifier => \'some.open.id\', primary_key => 12 }',
-  ) if !exists $opts->{primary_key};
+    Net::API::RPX::Exception::Usage->throw(
+        ident              => 'unmap_usage_needs_primay_key',
+        message            => "Primary Key is required",
+        required_parameter => 'primary_key',
+        method_name        => '->unmap',
+        package            => __PACKAGE__,
+        signature => '{ identifier => \'some.open.id\', primary_key => 12 }',
+    ) if !exists $opts->{primary_key};
 
-  $opts->{primaryKey} = delete $opts->{primary_key};
+    $opts->{primaryKey} = delete $opts->{primary_key};
 
-  return $self->_fetch('unmap', $opts);
+    return $self->_fetch( 'unmap', $opts );
 }
 
 =head2 mappings
@@ -197,65 +197,71 @@ This method returns information about the identifiers associated with a user.
 =cut
 
 sub mappings {
-  my ($self, $opts) = @_;
-  Net::API::RPX::Exception::Usage->throw(
-	ident => 'mappings_usage_needs_primary_key',
-    message => "Primary Key is required",
-    required_parameter => 'primary_key',
-    method_name => '->mappings',
-    package => __PACKAGE__,
-    signature  => '{ primary_key => 12 }',
-  ) if !exists $opts->{primary_key};
+    my ( $self, $opts ) = @_;
+    Net::API::RPX::Exception::Usage->throw(
+        ident              => 'mappings_usage_needs_primary_key',
+        message            => "Primary Key is required",
+        required_parameter => 'primary_key',
+        method_name        => '->mappings',
+        package            => __PACKAGE__,
+        signature          => '{ primary_key => 12 }',
+    ) if !exists $opts->{primary_key};
 
-  $opts->{primaryKey} = delete $opts->{primary_key};
+    $opts->{primaryKey} = delete $opts->{primary_key};
 
-  return $self->_fetch('mappings', $opts);
+    return $self->_fetch( 'mappings', $opts );
 }
 
 my $rpx_errors = {
-  -1 => 'Service Temporarily Unavailable',
-  0 => 'Missing parameter',
-  1 => 'Invalid parameter',
-  2 => 'Data not found',
-  3 => 'Authentication error',
-  4 => 'Facebook Error',
-  5 => 'Mapping exists',
+    -1 => 'Service Temporarily Unavailable',
+    0  => 'Missing parameter',
+    1  => 'Invalid parameter',
+    2  => 'Data not found',
+    3  => 'Authentication error',
+    4  => 'Facebook Error',
+    5  => 'Mapping exists',
 };
 
 sub _fetch {
-  my ($self, $uri_part, $opts) = @_;
+    my ( $self, $uri_part, $opts ) = @_;
 
-  my $uri = URI->new($self->base_url . $uri_part);
-  my $res = $self->ua->post($uri, {
-    %$opts,
-    apiKey => $self->api_key,
-    format => 'json',
-  });
-
-  if(!$res->is_success){
-    Net::API::RPX::Exception::Network->throw(
-		ident => '_fetch_network_failure',
-        message =>  "Could not contact RPX: " . $res->status_line(),
-        ua_result => $res,
-        status_line => $res->status_line,
+    my $uri = URI->new( $self->base_url . $uri_part );
+    my $res = $self->ua->post(
+        $uri,
+        {
+            %$opts,
+            apiKey => $self->api_key,
+            format => 'json',
+        }
     );
-  }
 
-  my $data = JSON::Any->from_json( $res->content );
-  if($data->{'stat'} ne 'ok'){
-    my $err = $data->{'err'};
-    Net::API::RPX::Exception::Service->throw(
-		ident => '_fetch_service_error',
-        data => $data,
-        status => $data->{'stat'},
-        rpx_error => $data->{'err'},
-        rpx_error_code => $data->{err}->{code},
-        rpx_error_message => $data->{err}->{msg},
-        message => "RPX returned error of type '". $rpx_errors->{ $err->{code} } . "' with message: " . $err->{msg},
-    );
-  }
-  delete $data->{'stat'};
-  return $data;
+    if ( !$res->is_success ) {
+        Net::API::RPX::Exception::Network->throw(
+            ident       => '_fetch_network_failure',
+            message     => "Could not contact RPX: " . $res->status_line(),
+            ua_result   => $res,
+            status_line => $res->status_line,
+        );
+    }
+
+    my $data = JSON::Any->from_json( $res->content );
+    if ( $data->{'stat'} ne 'ok' ) {
+        my $err = $data->{'err'};
+        Net::API::RPX::Exception::Service->throw(
+            ident             => '_fetch_service_error',
+            data              => $data,
+            status            => $data->{'stat'},
+            rpx_error         => $data->{'err'},
+            rpx_error_code    => $data->{err}->{code},
+            rpx_error_message => $data->{err}->{msg},
+            message           => "RPX returned error of type '"
+              . $rpx_errors->{ $err->{code} }
+              . "' with message: "
+              . $err->{msg},
+        );
+    }
+    delete $data->{'stat'};
+    return $data;
 }
 
 =head1 TEST COVERAGE
@@ -324,4 +330,4 @@ This program is released under the following license: BSD. Please see the LICENS
 
 =cut
 
-1; # End of Net::API::RPX
+1;    # End of Net::API::RPX
