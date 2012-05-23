@@ -1,4 +1,10 @@
 package Net::API::RPX;
+BEGIN {
+  $Net::API::RPX::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $Net::API::RPX::VERSION = '0.03';
+}
 
 # ABSTRACT: Perl interface to Janrain's RPX service
 
@@ -45,54 +51,6 @@ has _agent_string => (
     default  => sub { 'net-api-rpx-perl/' . $Net::API::RPX::VERSION },
 );
 
-=head1 SYNOPSIS
-
-    use Net::API::RPX;
-
-    my $rpx = Net::API::RPX->new({ api_key => '<your_api_key_here>' });
-
-    $rpx->auth_info({ token => $token });
-
-=head1 DESCRIPTION
-
-This module is a simple wrapper around Janrain's RPX service. RPX provides a single method for
-dealing with third-party authentication.
-
-See L<http://www.rpxnow.com> for more details.
-
-For specific information regarding the RPX API and method arguments, please refer to
-L<https://rpxnow.com/docs>.
-
-=head1 ATTRIBUTES
-
-This is a Moose based module, this classes attribtues are as so:
-
-=head2 api_key
-
-This is the api_key provided by Janrain to interface with RPX. You will need to signup to RPX
-to get one of these.
-
-=head2 base_url
-
-This is the base URL that is used to make API calls against. It defaults to the RPX v2 API.
-
-=head2 ua
-
-This is a LWP::UserAgent object. You may override it if you require more fine grain control
-over remote queries.
-
-=head1 METHODS
-
-=head2 auth_info
-
-    my $user_data = $rpx->auth_info({ token => $params{token} });
-
-Upon redirection back from RPX, you will be supplied a token to use for verification. Call
-auth_info to verify the authenticity of the token and gain user details.
-
-'token' argument is required, 'extended' argument is optional.
-
-=cut
 
 sub auth_info {
     my ( $self, $opts ) = @_;
@@ -107,15 +65,6 @@ sub auth_info {
     return $self->_fetch( 'auth_info', $opts );
 }
 
-=head2 map
-
-    $rpx->map({ identifier => 'yet.another.open.id', primary_key => 12 });
-
-This method allows you to map more than one 'identifier' to a user.
-
-'identifier' argument is required, 'primary_key' argument is required, 'overwrite' is optional.
-
-=cut
 
 sub map {
     my ( $self, $opts ) = @_;
@@ -141,15 +90,6 @@ sub map {
     return $self->_fetch( 'map', $opts );
 }
 
-=head2 unmap
-
-    $rpx->unmap({ identifier => 'yet.another.open.id', primary_key => 12 });
-
-This is the inverse of 'map'.
-
-'identifier' argument is required, 'primary_key' argument is required.
-
-=cut
 
 sub unmap {
     my ( $self, $opts ) = @_;
@@ -176,15 +116,6 @@ sub unmap {
     return $self->_fetch( 'unmap', $opts );
 }
 
-=head2 mappings
-
-    my $data = $rpx->mappings({ primary_key => 12 });
-
-This method returns information about the identifiers associated with a user.
-
-'primary_key' argument is required.
-
-=cut
 
 sub mappings {
     my ( $self, $opts ) = @_;
@@ -254,6 +185,91 @@ sub _fetch {
     return $data;
 }
 
+
+1;    # End of Net::API::RPX
+
+__END__
+=pod
+
+=head1 NAME
+
+Net::API::RPX - Perl interface to Janrain's RPX service
+
+=head1 VERSION
+
+version 0.03
+
+=head1 SYNOPSIS
+
+    use Net::API::RPX;
+
+    my $rpx = Net::API::RPX->new({ api_key => '<your_api_key_here>' });
+
+    $rpx->auth_info({ token => $token });
+
+=head1 DESCRIPTION
+
+This module is a simple wrapper around Janrain's RPX service. RPX provides a single method for
+dealing with third-party authentication.
+
+See L<http://www.rpxnow.com> for more details.
+
+For specific information regarding the RPX API and method arguments, please refer to
+L<https://rpxnow.com/docs>.
+
+=head1 ATTRIBUTES
+
+This is a Moose based module, this classes attribtues are as so:
+
+=head2 api_key
+
+This is the api_key provided by Janrain to interface with RPX. You will need to signup to RPX
+to get one of these.
+
+=head2 base_url
+
+This is the base URL that is used to make API calls against. It defaults to the RPX v2 API.
+
+=head2 ua
+
+This is a LWP::UserAgent object. You may override it if you require more fine grain control
+over remote queries.
+
+=head1 METHODS
+
+=head2 auth_info
+
+    my $user_data = $rpx->auth_info({ token => $params{token} });
+
+Upon redirection back from RPX, you will be supplied a token to use for verification. Call
+auth_info to verify the authenticity of the token and gain user details.
+
+'token' argument is required, 'extended' argument is optional.
+
+=head2 map
+
+    $rpx->map({ identifier => 'yet.another.open.id', primary_key => 12 });
+
+This method allows you to map more than one 'identifier' to a user.
+
+'identifier' argument is required, 'primary_key' argument is required, 'overwrite' is optional.
+
+=head2 unmap
+
+    $rpx->unmap({ identifier => 'yet.another.open.id', primary_key => 12 });
+
+This is the inverse of 'map'.
+
+'identifier' argument is required, 'primary_key' argument is required.
+
+=head2 mappings
+
+    my $data = $rpx->mappings({ primary_key => 12 });
+
+This method returns information about the identifiers associated with a user.
+
+'primary_key' argument is required.
+
 =head1 TEST COVERAGE
 
 This distribution is heavily unit and system tested for compatability with
@@ -267,7 +283,6 @@ how to supply these.
  blib/lib/Net/API/RPX.pm       100.0  100.0    n/a  100.0  100.0  100.0  100.0
  Total                         100.0  100.0    n/a  100.0  100.0  100.0  100.0
  ---------------------------- ------ ------ ------ ------ ------ ------ ------
-
 
 =head1 AUTHOR
 
@@ -284,7 +299,6 @@ automatically be notified of progress on your bug as I make changes.
 You can find documentation for this module with the perldoc command.
 
     perldoc Net::API::RPX
-
 
 You can also look for information at:
 
@@ -318,6 +332,27 @@ Copyright 2009 Cloudtone Studios, all rights reserved.
 
 This program is released under the following license: BSD. Please see the LICENSE file included in this distribution for details.
 
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Scott McWhirter <konobi@cpan.org>
+
+=item *
+
+Kent Fredric <kentnl@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2012 by Cloudtone Studios.
+
+This is free software, licensed under:
+
+  The (three-clause) BSD License
+
 =cut
 
-1;    # End of Net::API::RPX
