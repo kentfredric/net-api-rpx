@@ -1,6 +1,6 @@
 package Net::API::RPX;
 BEGIN {
-  $Net::API::RPX::AUTHORITY = 'cpan:KENTNL';
+  $Net::API::RPX::AUTHORITY = 'cpan:KONOBI';
 }
 {
   $Net::API::RPX::VERSION = '0.03';
@@ -185,7 +185,6 @@ sub _fetch {
     return $data;
 }
 
-
 1;    # End of Net::API::RPX
 
 __END__
@@ -284,10 +283,6 @@ how to supply these.
  Total                         100.0  100.0    n/a  100.0  100.0  100.0  100.0
  ---------------------------- ------ ------ ------ ------ ------ ------ ------
 
-=head1 AUTHOR
-
-Scott McWhirter, C<< <konobi at cpan.org> >>
-
 =head1 BUGS
 
 Please report any bugs or feature requests to C<bug-net-api-rpx at rt.cpan.org>, or through
@@ -325,12 +320,6 @@ L<http://search.cpan.org/dist/Net-API-RPX>
 =head1 SEE ALSO
 
 L<http://www.janrain.com/>, L<http://www.rpxnow.com/>
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2009 Cloudtone Studios, all rights reserved.
-
-This program is released under the following license: BSD. Please see the LICENSE file included in this distribution for details.
 
 =head1 AUTHORS
 

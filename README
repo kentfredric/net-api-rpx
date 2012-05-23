@@ -81,9 +81,6 @@ TEST COVERAGE
      Total                         100.0  100.0    n/a  100.0  100.0  100.0  100.0
      ---------------------------- ------ ------ ------ ------ ------ ------ ------
 
-AUTHOR
-    Scott McWhirter, "<konobi at cpan.org>"
-
 BUGS
     Please report any bugs or feature requests to "bug-net-api-rpx at
     rt.cpan.org", or through the web interface at
@@ -116,12 +113,6 @@ SUPPORT
 
 SEE ALSO
     <http://www.janrain.com/>, <http://www.rpxnow.com/>
-
-COPYRIGHT & LICENSE
-    Copyright 2009 Cloudtone Studios, all rights reserved.
-
-    This program is released under the following license: BSD. Please see
-    the LICENSE file included in this distribution for details.
 
 AUTHORS
     *   Scott McWhirter <konobi@cpan.org>

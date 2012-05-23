@@ -1,6 +1,6 @@
 package Net::API::RPX::Exception::Usage;
 BEGIN {
-  $Net::API::RPX::Exception::Usage::AUTHORITY = 'cpan:KENTNL';
+  $Net::API::RPX::Exception::Usage::AUTHORITY = 'cpan:KONOBI';
 }
 {
   $Net::API::RPX::Exception::Usage::VERSION = '0.03';
