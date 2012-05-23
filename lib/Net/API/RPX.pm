@@ -269,10 +269,6 @@ how to supply these.
  ---------------------------- ------ ------ ------ ------ ------ ------ ------
 
 
-=head1 AUTHOR
-
-Scott McWhirter, C<< <konobi at cpan.org> >>
-
 =head1 BUGS
 
 Please report any bugs or feature requests to C<bug-net-api-rpx at rt.cpan.org>, or through
@@ -312,12 +308,5 @@ L<http://search.cpan.org/dist/Net-API-RPX>
 
 L<http://www.janrain.com/>, L<http://www.rpxnow.com/>
 
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2009 Cloudtone Studios, all rights reserved.
-
-This program is released under the following license: BSD. Please see the LICENSE file included in this distribution for details.
-
 =cut
-
 1;    # End of Net::API::RPX
