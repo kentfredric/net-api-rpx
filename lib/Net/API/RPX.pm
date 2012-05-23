@@ -1,5 +1,7 @@
 package Net::API::RPX;
 
+# ABSTRACT: Perl interface to Janrain's RPX service
+
 use Moose;
 use LWP::UserAgent;
 use URI;
@@ -7,18 +9,6 @@ use JSON::Any;
 use Net::API::RPX::Exception::Usage;
 use Net::API::RPX::Exception::Network;
 use Net::API::RPX::Exception::Service;
-
-=head1 NAME
-
-Net::API::RPX - Perl interface to Janrain's RPX service
-
-=head1 VERSION
-
-Version 0.02
-
-=cut
-
-our $VERSION = '0.02';
 
 has api_key => (
     is       => 'rw',
@@ -52,7 +42,7 @@ has _agent_string => (
     isa      => 'Str',
     required => 1,
     lazy     => 1,
-    default  => sub { "net-api-rpx-perl/$VERSION" },
+    default  => sub { 'net-api-rpx-perl/' . $Net::API::RPX::VERSION },
 );
 
 =head1 SYNOPSIS

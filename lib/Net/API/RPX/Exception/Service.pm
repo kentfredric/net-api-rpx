@@ -1,5 +1,7 @@
 package Net::API::RPX::Exception::Service;
 
+# ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
+
 # $Id:$
 use strict;
 use warnings;
@@ -10,7 +12,6 @@ extends 'Net::API::RPX::Exception';
 
 =head1 NAME
 
-Net::API::RPX::Exception::Service - A Class of exceptions for delivering problems from the RPX service.
 
 =cut
 

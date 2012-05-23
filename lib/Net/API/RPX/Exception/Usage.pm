@@ -1,14 +1,8 @@
 package Net::API::RPX::Exception::Usage;
 
-# $Id:$
+# ABSTRACT: For when the interface is used wrongly
 use strict;
 use warnings;
-
-=head1 NAME
-
-Net::API::RPX::Exception::Usage - For when the interface is used wrongly.
-
-=cut
 
 use Moose;
 use namespace::autoclean;
