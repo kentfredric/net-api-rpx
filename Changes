@@ -1,6 +1,8 @@
 Revision history for Net-API-RPX
 
-0.04 2012-05-24T00:26:22Z
+0.04 2012-05-24T00:27:53Z
+
+ - Re-released to avoid a lot of cruft that snuck in somehow ( WTF?!!? )
 
 0.03 2012-05-24T00:23:24Z
 
