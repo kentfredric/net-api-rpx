@@ -1,3 +1,4 @@
+use strict;
 package Net::API::RPX::Exception;
 BEGIN {
   $Net::API::RPX::Exception::AUTHORITY = 'cpan:KONOBI';
@@ -8,7 +9,6 @@ BEGIN {
 
 # ABSTRACT:  A Baseclass for Net::API::RPX exceptions based on L<Throwable::X>
 
-use strict;
 use warnings;
 
 use Moose;

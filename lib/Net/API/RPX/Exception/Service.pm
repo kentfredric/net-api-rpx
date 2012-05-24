@@ -1,3 +1,4 @@
+use strict;
 package Net::API::RPX::Exception::Service;
 BEGIN {
   $Net::API::RPX::Exception::Service::AUTHORITY = 'cpan:KONOBI';
@@ -8,8 +9,6 @@ BEGIN {
 
 # ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
 
-# $Id:$
-use strict;
 use warnings;
 use Moose;
 use namespace::autoclean;

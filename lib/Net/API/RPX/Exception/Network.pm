@@ -1,3 +1,4 @@
+use strict;
 package Net::API::RPX::Exception::Network;
 BEGIN {
   $Net::API::RPX::Exception::Network::AUTHORITY = 'cpan:KONOBI';
@@ -8,8 +9,6 @@ BEGIN {
 
 # ABSTRACT: A Class of exceptions for network connectivitiy issues.
 
-# $Id:$
-use strict;
 use warnings;
 use Moose;
 use namespace::autoclean;

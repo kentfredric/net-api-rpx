@@ -1,3 +1,4 @@
+use strict;
 package Net::API::RPX::Exception::Usage;
 BEGIN {
   $Net::API::RPX::Exception::Usage::AUTHORITY = 'cpan:KONOBI';
@@ -7,7 +8,6 @@ BEGIN {
 }
 
 # ABSTRACT: For when the interface is used wrongly
-use strict;
 use warnings;
 
 use Moose;
