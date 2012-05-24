@@ -1,3 +1,4 @@
+use strict;
 package Net::API::RPX;
 BEGIN {
   $Net::API::RPX::AUTHORITY = 'cpan:KONOBI';
@@ -5,10 +6,10 @@ BEGIN {
 {
   $Net::API::RPX::VERSION = '0.03';
 }
-use Moose;
 
 # ABSTRACT: Perl interface to Janrain's RPX service
 
+use Moose;
 use LWP::UserAgent;
 use URI;
 use JSON::Any;
