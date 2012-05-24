@@ -1,3 +1,4 @@
+use strict;
 package Net::API::RPX;
 
 # ABSTRACT: Perl interface to Janrain's RPX service

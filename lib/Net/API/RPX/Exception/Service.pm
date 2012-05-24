@@ -1,9 +1,8 @@
+use strict;
 package Net::API::RPX::Exception::Service;
 
 # ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
 
-# $Id:$
-use strict;
 use warnings;
 use Moose;
 use namespace::autoclean;

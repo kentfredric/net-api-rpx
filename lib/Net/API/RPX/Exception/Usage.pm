@@ -1,7 +1,7 @@
+use strict;
 package Net::API::RPX::Exception::Usage;
 
 # ABSTRACT: For when the interface is used wrongly
-use strict;
 use warnings;
 
 use Moose;
