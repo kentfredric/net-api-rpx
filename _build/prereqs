@@ -1,0 +1,26 @@
+do{ my $x = {
+       'build_requires' => {
+                             'Test::Exception' => 0,
+                             'Test::More' => '0.88',
+                             'mocked' => 0,
+                             'unmocked' => 0,
+                             'File::Find' => 0,
+                             'Data::Dump' => 0,
+                             'File::Temp' => 0,
+                             'Module::Build' => '0.3601'
+                           },
+       'conflicts' => {},
+       'requires' => {
+                       'warnings' => 0,
+                       'namespace::autoclean' => 0,
+                       'URI' => 0,
+                       'Throwable::Error' => 0,
+                       'strict' => 0,
+                       'LWP::UserAgent' => 0,
+                       'Throwable::X' => 0,
+                       'JSON::Any' => 0,
+                       'Moose' => 0
+                     },
+       'recommends' => {}
+     };
+$x; }
