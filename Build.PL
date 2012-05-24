@@ -38,7 +38,6 @@ my %module_build_args = (
     "Throwable::X" => 0,
     "URI" => 0,
     "namespace::autoclean" => 0,
-    "perl" => "5.006",
     "strict" => 0,
     "warnings" => 0
   },
