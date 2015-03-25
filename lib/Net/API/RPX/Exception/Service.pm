@@ -6,7 +6,7 @@ package Net::API::RPX::Exception::Service;
 
 # ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
 
-our $VERSION = '1.000000';
+our $VERSION = '1.000001';
 
 # AUTHORITY
 

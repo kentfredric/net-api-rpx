@@ -6,7 +6,7 @@ package Net::API::RPX::Exception::Network;
 
 # ABSTRACT: A Class of exceptions for network connectivity issues.
 
-our $VERSION = '1.000000';
+our $VERSION = '1.000001';
 
 # AUTHORITY
 

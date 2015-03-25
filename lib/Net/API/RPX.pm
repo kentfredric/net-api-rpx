@@ -6,7 +6,7 @@ package Net::API::RPX;
 
 # ABSTRACT: Perl interface to Janrain's RPX service
 
-our $VERSION = '1.000000';
+our $VERSION = '1.000001';
 
 # AUTHORITY
 
