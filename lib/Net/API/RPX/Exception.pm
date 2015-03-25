@@ -10,7 +10,7 @@ our $VERSION = '1.000000';
 
 # AUTHORITY
 
-use Moose;
+use Moose qw( extends with );
 
 extends 'Throwable::Error';
 
