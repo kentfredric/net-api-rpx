@@ -126,23 +126,23 @@
    "provides" : {
       "Net::API::RPX" : {
          "file" : "lib/Net/API/RPX.pm",
-         "version" : "0.050000"
+         "version" : "0.05"
       },
       "Net::API::RPX::Exception" : {
          "file" : "lib/Net/API/RPX/Exception.pm",
-         "version" : "0.050000"
+         "version" : "0.05"
       },
       "Net::API::RPX::Exception::Network" : {
          "file" : "lib/Net/API/RPX/Exception/Network.pm",
-         "version" : "0.050000"
+         "version" : "0.05"
       },
       "Net::API::RPX::Exception::Service" : {
          "file" : "lib/Net/API/RPX/Exception/Service.pm",
-         "version" : "0.050000"
+         "version" : "0.05"
       },
       "Net::API::RPX::Exception::Usage" : {
          "file" : "lib/Net/API/RPX/Exception/Usage.pm",
-         "version" : "0.050000"
+         "version" : "0.05"
       }
    },
    "release_status" : "stable",
@@ -157,7 +157,7 @@
          "web" : "https://github.com/kentnl/Net-API-RPX"
       }
    },
-   "version" : "0.050000",
+   "version" : "0.05",
    "x_BuiltWith" : {
       "external_file" : "misc/built_with.json"
    },
@@ -178,7 +178,7 @@
                   "repo_root" : "."
                },
                "Dist::Zilla::Role::Version::Sanitize" : {
-                  "mantissa" : "6",
+                  "mantissa" : "2",
                   "normal_form" : "numify"
                }
             },
@@ -623,7 +623,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "0.050000-source",
+                  "tag" : "0.05-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -689,7 +689,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : "releases",
                   "signed" : 0,
-                  "tag" : "0.050000",
+                  "tag" : "0.05",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"

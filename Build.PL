@@ -20,7 +20,7 @@ my %module_build_args = (
     "Kent Fredric <kentnl\@cpan.org>"
   ],
   "dist_name" => "Net-API-RPX",
-  "dist_version" => "0.050000",
+  "dist_version" => "0.05",
   "license" => "bsd",
   "module_name" => "Net::API::RPX",
   "recommends" => {

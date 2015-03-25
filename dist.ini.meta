@@ -10,5 +10,8 @@ copyright_holder = Cloudtone Studios
 git_versions = 1
 twitter_hash_tags = #perl #cpan
 authority = cpan:KONOBI
-
+toolkit = mb
+toolkit_hardness = hard
+normal_form = numify
+mantissa = 2
 
