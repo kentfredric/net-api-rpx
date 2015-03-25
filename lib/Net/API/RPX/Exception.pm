@@ -16,8 +16,6 @@ extends 'Throwable::Error';
 
 with qw( Throwable::X );
 
-use Throwable::X -all;
-
 __PACKAGE__->meta->make_immutable( inline_constructor => 0 );
 
 no Moose;
