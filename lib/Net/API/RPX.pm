@@ -91,7 +91,7 @@ sub auth_info {
   my ( $self, $opts ) = @_;
   Net::API::RPX::Exception::Usage->throw(
     ident              => 'auth_info_usage_needs_token',
-    message            => "Token is required",
+    message            => 'Token is required',
     required_parameter => 'token',
     method_name        => '->auth_info',
     package            => __PACKAGE__,
@@ -114,7 +114,7 @@ sub map {
   my ( $self, $opts ) = @_;
   Net::API::RPX::Exception::Usage->throw(
     ident              => 'map_usage_needs_identifier',
-    message            => "Identifier is required",
+    message            => 'Identifier is required',
     required_parameter => 'identifier',
     method_name        => '->map',
     package            => __PACKAGE__,
@@ -123,7 +123,7 @@ sub map {
 
   Net::API::RPX::Exception::Usage->throw(
     ident              => 'map_usage_needs_primary_key',
-    message            => "Primary Key is required",
+    message            => 'Primary Key is required',
     required_parameter => 'primary_key',
     method_name        => '->map',
     package            => __PACKAGE__,
@@ -148,7 +148,7 @@ sub unmap {
   my ( $self, $opts ) = @_;
   Net::API::RPX::Exception::Usage->throw(
     ident              => 'unmap_usage_needs_identifier',
-    message            => "Identifier is required",
+    message            => 'Identifier is required',
     required_parameter => 'identifier',
     method_name        => '->unmap',
     package            => __PACKAGE__,
@@ -157,7 +157,7 @@ sub unmap {
 
   Net::API::RPX::Exception::Usage->throw(
     ident              => 'unmap_usage_needs_primay_key',
-    message            => "Primary Key is required",
+    message            => 'Primary Key is required',
     required_parameter => 'primary_key',
     method_name        => '->unmap',
     package            => __PACKAGE__,
@@ -183,7 +183,7 @@ sub mappings {
   my ( $self, $opts ) = @_;
   Net::API::RPX::Exception::Usage->throw(
     ident              => 'mappings_usage_needs_primary_key',
-    message            => "Primary Key is required",
+    message            => 'Primary Key is required',
     required_parameter => 'primary_key',
     method_name        => '->mappings',
     package            => __PACKAGE__,
@@ -237,7 +237,7 @@ sub _fetch {
       rpx_error         => $data->{'err'},
       rpx_error_code    => $data->{err}->{code},
       rpx_error_message => $data->{err}->{msg},
-      message           => "RPX returned error of type '" . $rpx_errors->{ $err->{code} } . "' with message: " . $err->{msg},
+      message           => 'RPX returned error of type \'' . $rpx_errors->{ $err->{code} } . '\' with message: ' . $err->{msg},
     );
   }
   delete $data->{'stat'};
