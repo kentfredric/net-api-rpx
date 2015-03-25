@@ -95,7 +95,7 @@ sub auth_info {
     required_parameter => 'token',
     method_name        => '->auth_info',
     package            => __PACKAGE__,
-    signature          => '{ token => $authtoken }',
+    signature          => '{ token => \'authtoken\' }',
   ) if !exists $opts->{token};
   return $self->_fetch( 'auth_info', $opts );
 }
