@@ -4,7 +4,7 @@ use warnings;
 
 package Net::API::RPX::Exception;
 
-# ABSTRACT: A Base class for Net::API::RPX exceptions based on L<Throwable::X>
+# ABSTRACT: A Base class for Net::API::RPX exceptions based on Throwable::X
 
 our $VERSION = '1.000000';
 
@@ -32,7 +32,7 @@ __END__
 
 =head1 NAME
 
-Net::API::RPX::Exception - A Base class for Net::API::RPX exceptions based on L<Throwable::X>
+Net::API::RPX::Exception - A Base class for Net::API::RPX exceptions based on Throwable::X
 
 =head1 VERSION
 
