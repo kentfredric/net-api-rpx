@@ -1,6 +1,6 @@
 Revision history for Net-API-RPX
 
-1.000000 2015-03-25T16:49:27Z 318e7c8
+1.000000 2015-03-25T17:27:21Z 4b74171
  [Dependencies::Stats]
  - Dependencies changed since 0.04, see misc/*.deps* for details
  - build: -1
@@ -20,6 +20,10 @@ Revision history for Net-API-RPX
  [Major - Version Scheme Changed]
  - Now uses x.yyyyyy
  - https://questhub.io/realm/perl/quest/5388d3a9bbd0be2224000129
+
+ [Metadata]
+ - Repo moved to KENTNL org.
+ - Issues moved to github
 
 0.04 2012-05-24T00:27:53Z
  - Re-released to avoid a lot of cruft that snuck in somehow ( WTF?!!? )
