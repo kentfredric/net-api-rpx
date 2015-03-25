@@ -33,7 +33,7 @@ has
   'rpx_error_code_description' => ( isa => 'Any', is => 'ro', required => 1, lazy => 1, ),
   , builder => '_build_rpx_error_code_description';
 
-__PACKAGE__->_immutable();
+__PACKAGE__->meta->make_immutable( inline_constructor => 0 );
 no Moose;
 
 sub _build_rpx_error_code_description {
