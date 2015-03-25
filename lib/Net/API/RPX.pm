@@ -226,21 +226,21 @@ sub _fetch {
     );
   }
 
-  my $data = decode_json( $res->content );
-  if ( $data->{'stat'} ne 'ok' ) {
-    my $err = $data->{'err'};
+  my $result = decode_json( $res->content );
+  if ( $result->{'stat'} ne 'ok' ) {
+    my $err = $result->{'err'};
     Net::API::RPX::Exception::Service->throw(
       ident             => '_fetch_service_error',
-      data              => $data,
-      status            => $data->{'stat'},
-      rpx_error         => $data->{'err'},
-      rpx_error_code    => $data->{err}->{code},
-      rpx_error_message => $data->{err}->{msg},
+      data              => $result,
+      status            => $result->{'stat'},
+      rpx_error         => $result->{'err'},
+      rpx_error_code    => $result->{err}->{code},
+      rpx_error_message => $result->{err}->{msg},
       message           => 'RPX returned error of type \'' . $rpx_errors->{ $err->{code} } . '\' with message: ' . $err->{msg},
     );
   }
-  delete $data->{'stat'};
-  return $data;
+  delete $result->{'stat'};
+  return $result;
 }
 
 1;    # End of Net::API::RPX
