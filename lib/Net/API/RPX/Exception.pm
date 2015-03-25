@@ -22,6 +22,8 @@ sub _immutable {
 }
 __PACKAGE__->_immutable;
 
+no Moose;
+
 1;
 
 __END__

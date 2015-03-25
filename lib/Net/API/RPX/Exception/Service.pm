@@ -14,11 +14,6 @@ use namespace::autoclean;
 
 extends 'Net::API::RPX::Exception';
 
-
-
-
-
-
 my $rpx_errors = {
   -1 => 'Service Temporarily Unavailable',
   0  => 'Missing parameter',
@@ -38,11 +33,13 @@ has
   'rpx_error_code_description' => ( isa => 'Any', is => 'ro', required => 1, lazy => 1, ),
   , builder => '_build_rpx_error_code_description';
 
+__PACKAGE__->_immutable();
+no Moose;
+
 sub _build_rpx_error_code_description {
   my ($self) = shift;
   return $rpx_errors->{ $self->rpx_error_code };
 }
-__PACKAGE__->_immutable();
 1;
 
 __END__
@@ -58,8 +55,6 @@ Net::API::RPX::Exception::Service - A Class of exceptions for delivering problem
 =head1 VERSION
 
 version 1.000000
-
-=head1 NAME
 
 =head1 AUTHORS
 

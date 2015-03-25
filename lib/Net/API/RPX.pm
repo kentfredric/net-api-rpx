@@ -72,6 +72,9 @@ has _agent_string => (
   default  => sub { 'net-api-rpx-perl/' . $Net::API::RPX::VERSION },
 );
 
+__PACKAGE__->meta->make_immutable;
+no Moose;
+
 
 
 

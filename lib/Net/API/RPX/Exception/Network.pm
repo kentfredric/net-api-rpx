@@ -18,6 +18,8 @@ has 'ua_result'   => ( isa => "Ref", is => 'ro', required => 1 );
 has 'status_line' => ( isa => "Str", is => 'ro', required => 1 );
 
 __PACKAGE__->_immutable;
+
+no Moose;
 1;
 
 __END__
