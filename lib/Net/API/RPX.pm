@@ -1,6 +1,6 @@
 use strict;
 package Net::API::RPX;
-$Net::API::RPX::VERSION = '0.05';
+$Net::API::RPX::VERSION = '0.050000';
 # ABSTRACT: Perl interface to Janrain's RPX service
 
 use Moose;
@@ -324,7 +324,7 @@ Net::API::RPX - Perl interface to Janrain's RPX service
 
 =head1 VERSION
 
-version 0.05
+version 0.050000
 
 =head1 SYNOPSIS
 

@@ -25,19 +25,19 @@ name: Net-API-RPX
 provides:
   Net::API::RPX:
     file: lib/Net/API/RPX.pm
-    version: '0.05'
+    version: '0.050000'
   Net::API::RPX::Exception:
     file: lib/Net/API/RPX/Exception.pm
-    version: '0.05'
+    version: '0.050000'
   Net::API::RPX::Exception::Network:
     file: lib/Net/API/RPX/Exception/Network.pm
-    version: '0.05'
+    version: '0.050000'
   Net::API::RPX::Exception::Service:
     file: lib/Net/API/RPX/Exception/Service.pm
-    version: '0.05'
+    version: '0.050000'
   Net::API::RPX::Exception::Usage:
     file: lib/Net/API/RPX/Exception/Usage.pm
-    version: '0.05'
+    version: '0.050000'
 recommends:
   Moose: '2.000'
 requires:
@@ -55,7 +55,7 @@ resources:
   bugtracker: https://github.com/kentnl/Net-API-RPX/issues
   homepage: https://github.com/kentnl/Net-API-RPX
   repository: https://github.com/kentnl/Net-API-RPX.git
-version: '0.05'
+version: '0.050000'
 x_BuiltWith:
   external_file: misc/built_with.json
 x_Dist_Zilla:
@@ -72,7 +72,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
         Dist::Zilla::Role::Version::Sanitize:
-          mantissa: '2'
+          mantissa: '6'
           normal_form: numify
       name: '@Author::KENTNL/Git::NextVersion::Sanitized'
       version: '0.002002'
@@ -415,7 +415,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: 0.05-source
+          tag: 0.050000-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -465,7 +465,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: 0
-          tag: '0.05'
+          tag: '0.050000'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
