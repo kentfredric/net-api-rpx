@@ -210,12 +210,11 @@ sub _fetch {
 
   my $uri = URI->new( $self->base_url . $uri_part );
   my $res = $self->ua->post(
-    $uri,
-    {
-      %$opts,
+    $uri => {
+      %{$opts},
       apiKey => $self->api_key,
       format => 'json',
-    }
+    },
   );
 
   if ( !$res->is_success ) {
