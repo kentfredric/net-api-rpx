@@ -1,12 +1,7 @@
 use strict;
 package Net::API::RPX;
-BEGIN {
-  $Net::API::RPX::AUTHORITY = 'cpan:KONOBI';
-}
-{
-  $Net::API::RPX::VERSION = '0.04';
-}
-
+our $AUTHORITY = 'cpan:KONOBI';
+$Net::API::RPX::VERSION = '0.05';
 # ABSTRACT: Perl interface to Janrain's RPX service
 
 use Moose;
@@ -189,7 +184,10 @@ sub _fetch {
 1;    # End of Net::API::RPX
 
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -197,7 +195,7 @@ Net::API::RPX - Perl interface to Janrain's RPX service
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -338,11 +336,10 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Cloudtone Studios.
+This software is Copyright (c) 2015 by Cloudtone Studios.
 
 This is free software, licensed under:
 
   The (three-clause) BSD License
 
 =cut
-

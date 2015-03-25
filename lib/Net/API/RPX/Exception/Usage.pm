@@ -1,12 +1,7 @@
 use strict;
 package Net::API::RPX::Exception::Usage;
-BEGIN {
-  $Net::API::RPX::Exception::Usage::AUTHORITY = 'cpan:KONOBI';
-}
-{
-  $Net::API::RPX::Exception::Usage::VERSION = '0.04';
-}
-
+our $AUTHORITY = 'cpan:KONOBI';
+$Net::API::RPX::Exception::Usage::VERSION = '0.05';
 # ABSTRACT: For when the interface is used wrongly
 use warnings;
 
@@ -43,9 +38,11 @@ around message => sub {
 __PACKAGE__->_immutable;
 1;
 
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -53,7 +50,7 @@ Net::API::RPX::Exception::Usage - For when the interface is used wrongly
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 AUTHORS
 
@@ -71,11 +68,10 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Cloudtone Studios.
+This software is Copyright (c) 2015 by Cloudtone Studios.
 
 This is free software, licensed under:
 
   The (three-clause) BSD License
 
 =cut
-

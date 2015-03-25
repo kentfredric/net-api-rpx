@@ -1,12 +1,7 @@
 use strict;
 package Net::API::RPX::Exception;
-BEGIN {
-  $Net::API::RPX::Exception::AUTHORITY = 'cpan:KONOBI';
-}
-{
-  $Net::API::RPX::Exception::VERSION = '0.04';
-}
-
+our $AUTHORITY = 'cpan:KONOBI';
+$Net::API::RPX::Exception::VERSION = '0.05';
 # ABSTRACT:  A Baseclass for Net::API::RPX exceptions based on L<Throwable::X>
 
 use warnings;
@@ -26,9 +21,11 @@ __PACKAGE__->_immutable;
 
 1;
 
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -36,7 +33,7 @@ Net::API::RPX::Exception - A Baseclass for Net::API::RPX exceptions based on L<T
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 AUTHORS
 
@@ -54,11 +51,10 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Cloudtone Studios.
+This software is Copyright (c) 2015 by Cloudtone Studios.
 
 This is free software, licensed under:
 
   The (three-clause) BSD License
 
 =cut
-

@@ -1,12 +1,7 @@
 use strict;
 package Net::API::RPX::Exception::Service;
-BEGIN {
-  $Net::API::RPX::Exception::Service::AUTHORITY = 'cpan:KONOBI';
-}
-{
-  $Net::API::RPX::Exception::Service::VERSION = '0.04';
-}
-
+our $AUTHORITY = 'cpan:KONOBI';
+$Net::API::RPX::Exception::Service::VERSION = '0.05';
 # ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
 
 use warnings;
@@ -43,9 +38,11 @@ sub _build_rpx_error_code_description {
 __PACKAGE__->_immutable();
 1;
 
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -53,7 +50,7 @@ Net::API::RPX::Exception::Service - A Class of exceptions for delivering problem
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 NAME
 
@@ -73,11 +70,10 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Cloudtone Studios.
+This software is Copyright (c) 2015 by Cloudtone Studios.
 
 This is free software, licensed under:
 
   The (three-clause) BSD License
 
 =cut
-
