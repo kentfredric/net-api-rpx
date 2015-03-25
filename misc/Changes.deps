@@ -6,6 +6,7 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
  - perl 5.006
 
  [Added / runtime requires]
+ - JSON::MaybeXS
  - perl 5.006
 
  [Added / test requires]
@@ -21,6 +22,9 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
 
  [Removed / configure requires]
  - Module::Build 0.3601
+
+ [Removed / runtime requires]
+ - JSON::Any
 
  [Removed / test requires]
  - File::Find
