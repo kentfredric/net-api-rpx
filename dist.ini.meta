@@ -13,5 +13,5 @@ authority = cpan:KONOBI
 toolkit = eumm
 toolkit_hardness = soft
 normal_form = numify
-mantissa = 2
+mantissa = 6
 

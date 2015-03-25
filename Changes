@@ -14,6 +14,10 @@ Revision history for Net-API-RPX
  - Dependencies are softened.
  - https://questhub.io/realm/perl/quest/5388cc12bbd0be5b2500011f
 
+ [Major - Version Scheme Changed]
+ - Now uses x.yyyyyy
+ - https://questhub.io/realm/perl/quest/5388d3a9bbd0be2224000129
+
 0.04 2012-05-24T00:27:53Z
  - Re-released to avoid a lot of cruft that snuck in somehow ( WTF?!!? )
 
