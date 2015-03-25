@@ -266,8 +266,8 @@ L<https://rpxnow.com/docs>.
 =head1 TEST COVERAGE
 
 This distribution is heavily unit and system tested for compatibility with
-L<Test::Builder>. If you come across any bugs, please send me or submit failing
-tests to Net-API-RPX RT queue. Please see the 'SUPPORT' section below on
+L<< <Test::Builder>|Test::Builder >>. If you come across any bugs, please send me or
+submit failing tests to Net-API-RPX RT queue. Please see the 'SUPPORT' section below on
 how to supply these.
 
  ---------------------------- ------ ------ ------ ------ ------ ------ ------
@@ -276,13 +276,6 @@ how to supply these.
  blib/lib/Net/API/RPX.pm       100.0  100.0    n/a  100.0  100.0  100.0  100.0
  Total                         100.0  100.0    n/a  100.0  100.0  100.0  100.0
  ---------------------------- ------ ------ ------ ------ ------ ------ ------
-
-
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-net-api-rpx at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Net-API-RPX>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
 
 =head1 SEE ALSO
 
