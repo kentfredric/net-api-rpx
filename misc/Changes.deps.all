@@ -1,6 +1,32 @@
 This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL dependencies for all phases (configure/build/runtime/test/develop)
 
 0.05
+ [Added / develop requires]
+ - Pod::Coverage::TrustPod
+ - Test::CPAN::Changes 0.19
+ - Test::CPAN::Meta
+ - Test::EOL
+ - Test::Kwalitee 1.21
+ - Test::More 0.88
+ - Test::Pod 1.41
+ - Test::Pod::Coverage 1.08
+ - version 0.9901
+
+ [Added / test requires]
+ - File::Spec
+ - IO::Handle
+ - IPC::Open3
+ - perl 5.006
+
+ [Changed / build requires]
+ - Module::Build 0.3601 → 0.28
+
+ [Changed / configure requires]
+ - Module::Build 0.3601 → 0.28
+
+ [Removed / test requires]
+ - File::Find
+ - File::Temp
 
 0.04 2012-05-24T00:27:53Z
 

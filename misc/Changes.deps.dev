@@ -1,6 +1,16 @@
 This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
 
 0.05
+ [Added / develop requires]
+ - Pod::Coverage::TrustPod
+ - Test::CPAN::Changes 0.19
+ - Test::CPAN::Meta
+ - Test::EOL
+ - Test::Kwalitee 1.21
+ - Test::More 0.88
+ - Test::Pod 1.41
+ - Test::Pod::Coverage 1.08
+ - version 0.9901
 
 0.04 2012-05-24T00:27:53Z
 
