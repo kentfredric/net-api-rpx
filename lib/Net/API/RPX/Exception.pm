@@ -18,7 +18,7 @@ with qw( Throwable::X );
 use Throwable::X -all;
 
 sub _immutable {
-    (shift)->meta->make_immutable( inline_constructor => 0 );
+  (shift)->meta->make_immutable( inline_constructor => 0 );
 }
 __PACKAGE__->_immutable;
 

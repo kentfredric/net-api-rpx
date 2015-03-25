@@ -12,11 +12,11 @@ our $LAST_POST_URL;
 our $LAST_POST_ARGUMENTS;
 
 sub post {
-    my ( $self, $url, $args ) = @_;
-    $LAST_POST_URL       = $url;
-    $LAST_POST_ARGUMENTS = {%$args};
+  my ( $self, $url, $args ) = @_;
+  $LAST_POST_URL       = $url;
+  $LAST_POST_ARGUMENTS = {%$args};
 
-    return HTTP::Response->new();
+  return HTTP::Response->new();
 }
 
 package    # HIDE FROM PAUSE INDEXER
