@@ -1,4 +1,5 @@
 use strict;
+
 package Net::API::RPX::Exception;
 
 # ABSTRACT:  A Baseclass for Net::API::RPX exceptions based on L<Throwable::X>

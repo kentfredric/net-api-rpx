@@ -1,4 +1,5 @@
 use strict;
+
 package Net::API::RPX;
 
 # ABSTRACT: Perl interface to Janrain's RPX service
@@ -311,4 +312,5 @@ L<http://search.cpan.org/dist/Net-API-RPX>
 L<http://www.janrain.com/>, L<http://www.rpxnow.com/>
 
 =cut
+
 1;    # End of Net::API::RPX

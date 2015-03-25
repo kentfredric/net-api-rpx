@@ -1,4 +1,5 @@
 use strict;
+
 package Net::API::RPX::Exception::Usage;
 
 # ABSTRACT: For when the interface is used wrongly
@@ -25,7 +26,7 @@ sub _signature_string {
 sub _explanation {
     my ($self) = @_;
     return
-        sprintf q{Method %s on package %s expects the parameter "%s"} 
+        sprintf q{Method %s on package %s expects the parameter "%s"}
       . qq{\n\n}
       . qq{\tUsage:\t%s\n}, $self->method_name,
       $self->package,
