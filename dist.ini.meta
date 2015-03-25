@@ -1,3 +1,4 @@
+; vim: syntax=dosini
 name = Net-API-RPX
 author = Scott McWhirter <konobi@cpan.org>
 author = Kent Fredric <kentnl@cpan.org>
