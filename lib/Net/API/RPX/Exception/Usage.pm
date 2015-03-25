@@ -36,6 +36,9 @@ around message => sub {
   return $self->$orig(@args) . qq{\n} . $self->_explanation;
 };
 
-__PACKAGE__->_immutable;
+__PACKAGE__->meta->make_immutable( inline_constructor => 0 );
+
+no Moose;
+
 1;
 
