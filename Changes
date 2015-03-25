@@ -1,6 +1,6 @@
 Revision history for Net-API-RPX
 
-1.000000 2015-03-25T16:42:29Z 5b59138
+1.000000 2015-03-25T16:49:27Z 318e7c8
  [Dependencies::Stats]
  - Dependencies changed since 0.04, see misc/*.deps* for details
  - build: -1

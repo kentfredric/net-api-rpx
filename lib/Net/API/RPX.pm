@@ -110,7 +110,7 @@ sub auth_info {
 
 
 
-sub map { ## no critic (Subroutines::ProhibitBuiltinHomonyms)
+sub map {    ## no critic (Subroutines::ProhibitBuiltinHomonyms)
   my ( $self, $opts ) = @_;
   Net::API::RPX::Exception::Usage->throw(
     ident              => 'map_usage_needs_identifier',
