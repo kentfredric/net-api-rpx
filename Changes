@@ -3,17 +3,21 @@ Revision history for Net-API-RPX
 {{$NEXT}}
 
 0.04 2012-05-24T00:27:53Z
-
  - Re-released to avoid a lot of cruft that snuck in somehow ( WTF?!!? )
 
 0.03 2012-05-24T00:23:24Z
-
  - Toolkit switched to Dist::Zilla ( Kent Fredric )
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.02, see misc/*.deps* for details
+ - build: +1
+ - configure: +1
+ - runtime: +9
+ - test: +7
 
 0.02 2012-05-23T23:31:00Z
  - Added fully fledged exception objects to replace die() calls.
- - If you catch one somehow, you can now introspect them and get a better
-   idea of what went wrong. ( Kent Fredric )
+ - If you catch one somehow, you can now introspect them and get a better idea of what went wrong. ( Kent Fredric )
 
 0.01 2009-02-20T12:14:00Z
  - First version.
