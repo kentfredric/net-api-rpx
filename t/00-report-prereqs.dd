@@ -80,7 +80,7 @@ do { my $x = {
                                         'Moose' => '2.000'
                                       },
                       'requires' => {
-                                      'JSON::Any' => '0',
+                                      'JSON::MaybeXS' => '0',
                                       'LWP::UserAgent' => '0',
                                       'Moose' => '0',
                                       'Throwable::Error' => '0',

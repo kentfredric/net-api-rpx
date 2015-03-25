@@ -12,7 +12,7 @@ our $AUTHORITY = 'cpan:KONOBI'; # AUTHORITY
 use Moose;
 use LWP::UserAgent;
 use URI;
-use JSON::Any;
+use JSON::MaybeXS qw( decode_json );
 use Net::API::RPX::Exception::Usage;
 use Net::API::RPX::Exception::Network;
 use Net::API::RPX::Exception::Service;
@@ -241,7 +241,7 @@ sub _fetch {
     );
   }
 
-  my $data = JSON::Any->from_json( $res->content );
+  my $data = decode_json( $res->content );
   if ( $data->{'stat'} ne 'ok' ) {
     my $err = $data->{'err'};
     Net::API::RPX::Exception::Service->throw(
