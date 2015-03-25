@@ -17,11 +17,24 @@ use Net::API::RPX::Exception::Usage;
 use Net::API::RPX::Exception::Network;
 use Net::API::RPX::Exception::Service;
 
+
+
+
+
+
+
+
 has api_key => (
   is       => 'rw',
   isa      => 'Str',
   required => 1,
 );
+
+
+
+
+
+
 
 has base_url => (
   is       => 'rw',
@@ -30,6 +43,13 @@ has base_url => (
   lazy     => 1,
   default  => 'https://rpxnow.com/api/v2/',
 );
+
+
+
+
+
+
+
 
 has ua => (
   is       => 'rw',
@@ -51,44 +71,6 @@ has _agent_string => (
   lazy     => 1,
   default  => sub { 'net-api-rpx-perl/' . $Net::API::RPX::VERSION },
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -258,62 +240,6 @@ sub _fetch {
   return $data;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1;    # End of Net::API::RPX
 
 __END__
@@ -347,24 +273,6 @@ See L<http://www.rpxnow.com> for more details.
 
 For specific information regarding the RPX API and method arguments, please refer to
 L<https://rpxnow.com/docs>.
-
-=head1 ATTRIBUTES
-
-This is a Moose based module, this classes attribtues are as so:
-
-=head2 api_key
-
-This is the api_key provided by Janrain to interface with RPX. You will need to signup to RPX
-to get one of these.
-
-=head2 base_url
-
-This is the base URL that is used to make API calls against. It defaults to the RPX v2 API.
-
-=head2 ua
-
-This is a LWP::UserAgent object. You may override it if you require more fine grain control
-over remote queries.
 
 =head1 METHODS
 
@@ -401,6 +309,22 @@ This method returns information about the identifiers associated with a user.
 
 'primary_key' argument is required.
 
+=head1 ATTRIBUTES
+
+=head2 api_key
+
+This is the api_key provided by Janrain to interface with RPX. You will need to signup to RPX
+to get one of these.
+
+=head2 base_url
+
+This is the base URL that is used to make API calls against. It defaults to the RPX v2 API.
+
+=head2 ua
+
+This is a LWP::UserAgent object. You may override it if you require more fine grain control
+over remote queries.
+
 =head1 TEST COVERAGE
 
 This distribution is heavily unit and system tested for compatability with
@@ -420,34 +344,6 @@ how to supply these.
 Please report any bugs or feature requests to C<bug-net-api-rpx at rt.cpan.org>, or through
 the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Net-API-RPX>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Net::API::RPX
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Net-API-RPX>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Net-API-RPX>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Net-API-RPX>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Net-API-RPX>
-
-=back
 
 =head1 SEE ALSO
 

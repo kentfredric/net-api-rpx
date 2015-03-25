@@ -35,6 +35,7 @@ t/00-report-prereqs.t
 t/01-basic.t
 t/02-exceptions.t
 t/mock/LWP/UserAgent.pm
+weaver.ini
 xt/author/critic.t
 xt/author/eol.t
 xt/release/cpan-changes.t
