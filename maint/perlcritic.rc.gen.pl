@@ -20,7 +20,7 @@ $bundle->configure;
 
 my @stopwords = (
   qw(
-    McWhirter Cloudtone
+    McWhirter Cloudtone Janrain RPX API
     )
 );
 for my $var (@stopwords) {
