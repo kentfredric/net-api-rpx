@@ -221,7 +221,7 @@ sub _fetch {
   if ( !$res->is_success ) {
     Net::API::RPX::Exception::Network->throw(
       ident       => '_fetch_network_failure',
-      message     => "Could not contact RPX: " . $res->status_line(),
+      message     => 'Could not contact RPX: ' . $res->status_line(),
       ua_result   => $res,
       status_line => $res->status_line,
     );
