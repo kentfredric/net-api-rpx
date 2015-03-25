@@ -1,7 +1,6 @@
 use strict;
 package Net::API::RPX::Exception::Service;
-our $AUTHORITY = 'cpan:KONOBI';
-$Net::API::RPX::Exception::Service::VERSION = '0.05';
+$Net::API::RPX::Exception::Service::VERSION = '0.050000';
 # ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
 
 use warnings;
@@ -9,6 +8,10 @@ use Moose;
 use namespace::autoclean;
 
 extends 'Net::API::RPX::Exception';
+
+
+
+
 
 
 my $rpx_errors = {
@@ -50,7 +53,7 @@ Net::API::RPX::Exception::Service - A Class of exceptions for delivering problem
 
 =head1 VERSION
 
-version 0.05
+version 0.050000
 
 =head1 NAME
 

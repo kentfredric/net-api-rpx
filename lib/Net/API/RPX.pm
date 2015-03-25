@@ -1,7 +1,6 @@
 use strict;
 package Net::API::RPX;
-our $AUTHORITY = 'cpan:KONOBI';
-$Net::API::RPX::VERSION = '0.05';
+$Net::API::RPX::VERSION = '0.050000';
 # ABSTRACT: Perl interface to Janrain's RPX service
 
 use Moose;
@@ -48,6 +47,54 @@ has _agent_string => (
 );
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 sub auth_info {
     my ( $self, $opts ) = @_;
     Net::API::RPX::Exception::Usage->throw(
@@ -60,6 +107,15 @@ sub auth_info {
     ) if !exists $opts->{token};
     return $self->_fetch( 'auth_info', $opts );
 }
+
+
+
+
+
+
+
+
+
 
 
 sub map {
@@ -87,6 +143,15 @@ sub map {
 }
 
 
+
+
+
+
+
+
+
+
+
 sub unmap {
     my ( $self, $opts ) = @_;
     Net::API::RPX::Exception::Usage->throw(
@@ -111,6 +176,15 @@ sub unmap {
 
     return $self->_fetch( 'unmap', $opts );
 }
+
+
+
+
+
+
+
+
+
 
 
 sub mappings {
@@ -181,6 +255,61 @@ sub _fetch {
     return $data;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1;    # End of Net::API::RPX
 
 __END__
@@ -195,7 +324,7 @@ Net::API::RPX - Perl interface to Janrain's RPX service
 
 =head1 VERSION
 
-version 0.05
+version 0.050000
 
 =head1 SYNOPSIS
 

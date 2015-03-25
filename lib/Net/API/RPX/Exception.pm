@@ -1,7 +1,6 @@
 use strict;
 package Net::API::RPX::Exception;
-our $AUTHORITY = 'cpan:KONOBI';
-$Net::API::RPX::Exception::VERSION = '0.05';
+$Net::API::RPX::Exception::VERSION = '0.050000';
 # ABSTRACT:  A Baseclass for Net::API::RPX exceptions based on L<Throwable::X>
 
 use warnings;
@@ -33,7 +32,7 @@ Net::API::RPX::Exception - A Baseclass for Net::API::RPX exceptions based on L<T
 
 =head1 VERSION
 
-version 0.05
+version 0.050000
 
 =head1 AUTHORS
 

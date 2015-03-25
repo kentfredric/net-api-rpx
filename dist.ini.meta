@@ -1,0 +1,14 @@
+name = Net-API-RPX
+author = Scott McWhirter <konobi@cpan.org>
+author = Kent Fredric <kentnl@cpan.org>
+license = BSD
+copyright_holder = Cloudtone Studios
+
+
+[@Author::KENTNL]
+:version = 2.024
+git_versions = 1
+twitter_hash_tags = #perl #cpan
+authority = cpan:KONOBI
+
+

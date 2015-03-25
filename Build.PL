@@ -8,10 +8,11 @@ use Module::Build 0.28;
 
 my %module_build_args = (
   "build_requires" => {
-    "Module::Build" => "0.28"
+    "Module::Build" => "0.4211"
   },
   "configure_requires" => {
-    "Module::Build" => "0.28"
+    "Module::Build" => "0.4211",
+    "perl" => "5.006"
   },
   "dist_abstract" => "Perl interface to Janrain's RPX service",
   "dist_author" => [
@@ -19,10 +20,12 @@ my %module_build_args = (
     "Kent Fredric <kentnl\@cpan.org>"
   ],
   "dist_name" => "Net-API-RPX",
-  "dist_version" => "0.05",
+  "dist_version" => "0.050000",
   "license" => "bsd",
   "module_name" => "Net::API::RPX",
-  "recommends" => {},
+  "recommends" => {
+    "Moose" => "2.000"
+  },
   "recursive_test_files" => 1,
   "requires" => {
     "JSON::Any" => 0,
@@ -32,17 +35,17 @@ my %module_build_args = (
     "Throwable::X" => 0,
     "URI" => 0,
     "namespace::autoclean" => 0,
+    "perl" => "5.006",
     "strict" => 0,
     "warnings" => 0
   },
   "script_files" => [],
   "test_requires" => {
     "Data::Dump" => 0,
+    "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
-    "IO::Handle" => 0,
-    "IPC::Open3" => 0,
     "Test::Exception" => 0,
-    "Test::More" => "0.88",
+    "Test::More" => "1.301001_098",
     "mocked" => 0,
     "perl" => "5.006",
     "unmocked" => 0
@@ -52,12 +55,11 @@ my %module_build_args = (
 
 my %fallback_build_requires = (
   "Data::Dump" => 0,
+  "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
-  "IO::Handle" => 0,
-  "IPC::Open3" => 0,
-  "Module::Build" => "0.28",
+  "Module::Build" => "0.4211",
   "Test::Exception" => 0,
-  "Test::More" => "0.88",
+  "Test::More" => "1.301001_098",
   "mocked" => 0,
   "perl" => "5.006",
   "unmocked" => 0

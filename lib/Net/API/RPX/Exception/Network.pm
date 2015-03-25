@@ -1,7 +1,6 @@
 use strict;
 package Net::API::RPX::Exception::Network;
-our $AUTHORITY = 'cpan:KONOBI';
-$Net::API::RPX::Exception::Network::VERSION = '0.05';
+$Net::API::RPX::Exception::Network::VERSION = '0.050000';
 # ABSTRACT: A Class of exceptions for network connectivitiy issues.
 
 use warnings;
@@ -28,7 +27,7 @@ Net::API::RPX::Exception::Network - A Class of exceptions for network connectivi
 
 =head1 VERSION
 
-version 0.05
+version 0.050000
 
 =head1 AUTHORS
 

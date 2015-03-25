@@ -1,7 +1,6 @@
 use strict;
 package Net::API::RPX::Exception::Usage;
-our $AUTHORITY = 'cpan:KONOBI';
-$Net::API::RPX::Exception::Usage::VERSION = '0.05';
+$Net::API::RPX::Exception::Usage::VERSION = '0.050000';
 # ABSTRACT: For when the interface is used wrongly
 use warnings;
 
@@ -50,7 +49,7 @@ Net::API::RPX::Exception::Usage - For when the interface is used wrongly
 
 =head1 VERSION
 
-version 0.05
+version 0.050000
 
 =head1 AUTHORS
 
