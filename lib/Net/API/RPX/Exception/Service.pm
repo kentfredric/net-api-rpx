@@ -1,7 +1,9 @@
 use strict;
+
 package Net::API::RPX::Exception::Service;
-$Net::API::RPX::Exception::Service::VERSION = '0.050000';
+
 # ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
+our $VERSION = '1.000000';
 
 use warnings;
 use Moose;
@@ -53,7 +55,7 @@ Net::API::RPX::Exception::Service - A Class of exceptions for delivering problem
 
 =head1 VERSION
 
-version 0.050000
+version 1.000000
 
 =head1 NAME
 

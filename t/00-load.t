@@ -3,7 +3,7 @@
 use Test::More tests => 1;
 
 BEGIN {
-	use_ok( 'Net::API::RPX' );
+    use_ok('Net::API::RPX');
 }
 
-diag( "Testing Net::API::RPX $Net::API::RPX::VERSION, Perl $], $^X" );
+diag("Testing Net::API::RPX $Net::API::RPX::VERSION, Perl $], $^X");

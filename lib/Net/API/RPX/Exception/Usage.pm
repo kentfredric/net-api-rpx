@@ -1,7 +1,11 @@
 use strict;
+
 package Net::API::RPX::Exception::Usage;
-$Net::API::RPX::Exception::Usage::VERSION = '0.050000';
+
 # ABSTRACT: For when the interface is used wrongly
+
+our $VERSION = '1.000000';
+
 use warnings;
 
 use Moose;
@@ -22,7 +26,7 @@ sub _signature_string {
 sub _explanation {
     my ($self) = @_;
     return
-        sprintf q{Method %s on package %s expects the parameter "%s"} 
+        sprintf q{Method %s on package %s expects the parameter "%s"}
       . qq{\n\n}
       . qq{\tUsage:\t%s\n}, $self->method_name,
       $self->package,
@@ -49,7 +53,7 @@ Net::API::RPX::Exception::Usage - For when the interface is used wrongly
 
 =head1 VERSION
 
-version 0.050000
+version 1.000000
 
 =head1 AUTHORS
 

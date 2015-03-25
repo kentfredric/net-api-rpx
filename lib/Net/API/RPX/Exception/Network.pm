@@ -1,7 +1,9 @@
 use strict;
+
 package Net::API::RPX::Exception::Network;
-$Net::API::RPX::Exception::Network::VERSION = '0.050000';
+
 # ABSTRACT: A Class of exceptions for network connectivitiy issues.
+our $VERSION = '1.000000';
 
 use warnings;
 use Moose;
@@ -27,7 +29,7 @@ Net::API::RPX::Exception::Network - A Class of exceptions for network connectivi
 
 =head1 VERSION
 
-version 0.050000
+version 1.000000
 
 =head1 AUTHORS
 

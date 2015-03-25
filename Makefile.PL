@@ -37,7 +37,7 @@ my %WriteMakefileArgs = (
     "mocked" => 0,
     "unmocked" => 0
   },
-  "VERSION" => "0.050000",
+  "VERSION" => "1.000000",
   "test" => {
     "TESTS" => "t/*.t t/00-compile/*.t"
   }

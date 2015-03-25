@@ -1,7 +1,9 @@
 use strict;
+
 package Net::API::RPX;
-$Net::API::RPX::VERSION = '0.050000';
+
 # ABSTRACT: Perl interface to Janrain's RPX service
+our $VERSION = '1.000000';
 
 use Moose;
 use LWP::UserAgent;
@@ -310,6 +312,7 @@ sub _fetch {
 
 
 
+
 1;    # End of Net::API::RPX
 
 __END__
@@ -324,7 +327,7 @@ Net::API::RPX - Perl interface to Janrain's RPX service
 
 =head1 VERSION
 
-version 0.050000
+version 1.000000
 
 =head1 SYNOPSIS
 
