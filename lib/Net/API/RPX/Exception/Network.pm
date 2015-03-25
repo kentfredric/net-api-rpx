@@ -2,6 +2,7 @@ use strict;
 package Net::API::RPX::Exception::Network;
 
 # ABSTRACT: A Class of exceptions for network connectivitiy issues.
+our $VERSION = '1.000000';
 
 use warnings;
 use Moose;

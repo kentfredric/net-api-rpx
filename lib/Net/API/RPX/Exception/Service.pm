@@ -2,6 +2,7 @@ use strict;
 package Net::API::RPX::Exception::Service;
 
 # ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
+our $VERSION = '1.000000';
 
 use warnings;
 use Moose;

@@ -2,6 +2,7 @@ use strict;
 package Net::API::RPX;
 
 # ABSTRACT: Perl interface to Janrain's RPX service
+our $VERSION = '1.000000';
 
 use Moose;
 use LWP::UserAgent;

@@ -7,7 +7,7 @@ copyright_holder = Cloudtone Studios
 
 [@Author::KENTNL]
 :version = 2.024
-git_versions = 1
+bumpversions = 1
 twitter_hash_tags = #perl #cpan
 authority = cpan:KONOBI
 toolkit = eumm

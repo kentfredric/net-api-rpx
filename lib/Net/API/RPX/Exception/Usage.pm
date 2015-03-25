@@ -2,6 +2,9 @@ use strict;
 package Net::API::RPX::Exception::Usage;
 
 # ABSTRACT: For when the interface is used wrongly
+
+our $VERSION = '1.000000';
+
 use warnings;
 
 use Moose;
