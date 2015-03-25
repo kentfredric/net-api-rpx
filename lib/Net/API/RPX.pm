@@ -1,9 +1,13 @@
 use strict;
+use warnings;
 
 package Net::API::RPX;
 
 # ABSTRACT: Perl interface to Janrain's RPX service
+
 our $VERSION = '1.000000';
+
+# AUTHORITY
 
 use Moose;
 use LWP::UserAgent;

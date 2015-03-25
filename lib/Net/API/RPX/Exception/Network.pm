@@ -1,11 +1,14 @@
 use strict;
+use warnings;
 
 package Net::API::RPX::Exception::Network;
 
 # ABSTRACT: A Class of exceptions for network connectivitiy issues.
+
 our $VERSION = '1.000000';
 
-use warnings;
+# AUTHORITY
+
 use Moose;
 use namespace::autoclean;
 
