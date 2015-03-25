@@ -17,11 +17,24 @@ use Net::API::RPX::Exception::Usage;
 use Net::API::RPX::Exception::Network;
 use Net::API::RPX::Exception::Service;
 
+=attr C<api_key>
+
+This is the api_key provided by Janrain to interface with RPX. You will need to sign up to RPX
+to get one of these.
+
+=cut
+
 has api_key => (
   is       => 'rw',
   isa      => 'Str',
   required => 1,
 );
+
+=attr C<base_url>
+
+This is the base URL that is used to make API calls against. It defaults to the RPX v2 API.
+
+=cut
 
 has base_url => (
   is       => 'rw',
@@ -30,6 +43,13 @@ has base_url => (
   lazy     => 1,
   default  => 'https://rpxnow.com/api/v2/',
 );
+
+=attr C<ua>
+
+This is a LWP::UserAgent object. You may override it if you require more fine grain control
+over remote queries.
+
+=cut
 
 has ua => (
   is       => 'rw',
@@ -52,45 +72,7 @@ has _agent_string => (
   default  => sub { 'net-api-rpx-perl/' . $Net::API::RPX::VERSION },
 );
 
-=head1 SYNOPSIS
-
-    use Net::API::RPX;
-
-    my $rpx = Net::API::RPX->new({ api_key => '<your_api_key_here>' });
-
-    $rpx->auth_info({ token => $token });
-
-=head1 DESCRIPTION
-
-This module is a simple wrapper around Janrain's RPX service. RPX provides a single method for
-dealing with third-party authentication.
-
-See L<http://www.rpxnow.com> for more details.
-
-For specific information regarding the RPX API and method arguments, please refer to
-L<https://rpxnow.com/docs>.
-
-=head1 ATTRIBUTES
-
-This is a Moose based module, this classes attribtues are as so:
-
-=head2 api_key
-
-This is the api_key provided by Janrain to interface with RPX. You will need to signup to RPX
-to get one of these.
-
-=head2 base_url
-
-This is the base URL that is used to make API calls against. It defaults to the RPX v2 API.
-
-=head2 ua
-
-This is a LWP::UserAgent object. You may override it if you require more fine grain control
-over remote queries.
-
-=head1 METHODS
-
-=head2 auth_info
+=method C<auth_info>
 
     my $user_data = $rpx->auth_info({ token => $params{token} });
 
@@ -114,7 +96,7 @@ sub auth_info {
   return $self->_fetch( 'auth_info', $opts );
 }
 
-=head2 map
+=method C<map>
 
     $rpx->map({ identifier => 'yet.another.open.id', primary_key => 12 });
 
@@ -148,7 +130,7 @@ sub map {
   return $self->_fetch( 'map', $opts );
 }
 
-=head2 unmap
+=method C<unmap>
 
     $rpx->unmap({ identifier => 'yet.another.open.id', primary_key => 12 });
 
@@ -183,7 +165,7 @@ sub unmap {
   return $self->_fetch( 'unmap', $opts );
 }
 
-=head2 mappings
+=method C<mappings>
 
     my $data = $rpx->mappings({ primary_key => 12 });
 
@@ -258,9 +240,29 @@ sub _fetch {
   return $data;
 }
 
+1;    # End of Net::API::RPX
+
+=head1 SYNOPSIS
+
+    use Net::API::RPX;
+
+    my $rpx = Net::API::RPX->new({ api_key => '<your_api_key_here>' });
+
+    $rpx->auth_info({ token => $token });
+
+=head1 DESCRIPTION
+
+This module is a simple wrapper around Janrain's RPX service. RPX provides a single method for
+dealing with third-party authentication.
+
+See L<http://www.rpxnow.com> for more details.
+
+For specific information regarding the RPX API and method arguments, please refer to
+L<https://rpxnow.com/docs>.
+
 =head1 TEST COVERAGE
 
-This distribution is heavily unit and system tested for compatability with
+This distribution is heavily unit and system tested for compatibility with
 L<Test::Builder>. If you come across any bugs, please send me or submit failing
 tests to Net-API-RPX RT queue. Please see the 'SUPPORT' section below on
 how to supply these.
@@ -279,39 +281,8 @@ Please report any bugs or feature requests to C<bug-net-api-rpx at rt.cpan.org>,
 the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Net-API-RPX>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
 
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Net::API::RPX
-
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Net-API-RPX>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Net-API-RPX>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Net-API-RPX>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Net-API-RPX>
-
-=back
-
 =head1 SEE ALSO
 
 L<http://www.janrain.com/>, L<http://www.rpxnow.com/>
 
 =cut
-
-1;    # End of Net::API::RPX

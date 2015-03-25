@@ -14,11 +14,6 @@ use namespace::autoclean;
 
 extends 'Net::API::RPX::Exception';
 
-=head1 NAME
-
-
-=cut
-
 my $rpx_errors = {
   -1 => 'Service Temporarily Unavailable',
   0  => 'Missing parameter',

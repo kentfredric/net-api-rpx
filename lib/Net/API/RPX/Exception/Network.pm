@@ -3,7 +3,7 @@ use warnings;
 
 package Net::API::RPX::Exception::Network;
 
-# ABSTRACT: A Class of exceptions for network connectivitiy issues.
+# ABSTRACT: A Class of exceptions for network connectivity issues.
 
 our $VERSION = '1.000000';
 
