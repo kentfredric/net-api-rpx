@@ -17,14 +17,11 @@ my @files = (
     't/00-compile/lib_Net_API_RPX_Exception_Usage_pm.t',
     't/00-compile/lib_Net_API_RPX_Exception_pm.t',
     't/00-compile/lib_Net_API_RPX_pm.t',
-    't/00-load.t',
     't/00-report-prereqs.dd',
     't/00-report-prereqs.t',
     't/01-basic.t',
     't/02-exceptions.t',
-    't/mock/LWP/UserAgent.pm',
-    't/pod-coverage.t',
-    't/pod.t'
+    't/mock/LWP/UserAgent.pm'
 );
 
 eol_unix_ok($_, { trailing_whitespace => 1 }) foreach @files;

@@ -1,11 +1,14 @@
 use strict;
+use warnings;
 
 package Net::API::RPX::Exception::Service;
 
 # ABSTRACT: A Class of exceptions for delivering problems from the RPX service.
+
 our $VERSION = '1.000000';
 
-use warnings;
+our $AUTHORITY = 'cpan:KONOBI'; # AUTHORITY
+
 use Moose;
 use namespace::autoclean;
 
