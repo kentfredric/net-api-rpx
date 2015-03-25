@@ -327,7 +327,7 @@ over remote queries.
 
 =head1 TEST COVERAGE
 
-This distribution is heavily unit and system tested for compatability with
+This distribution is heavily unit and system tested for compatibility with
 L<Test::Builder>. If you come across any bugs, please send me or submit failing
 tests to Net-API-RPX RT queue. Please see the 'SUPPORT' section below on
 how to supply these.
