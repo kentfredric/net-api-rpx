@@ -10,7 +10,7 @@ our $VERSION = '1.000000';
 
 our $AUTHORITY = 'cpan:KONOBI'; # AUTHORITY
 
-use Moose;
+use Moose qw( extends with );
 
 extends 'Throwable::Error';
 

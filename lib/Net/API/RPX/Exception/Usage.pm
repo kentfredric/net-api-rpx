@@ -10,7 +10,7 @@ our $VERSION = '1.000000';
 
 our $AUTHORITY = 'cpan:KONOBI'; # AUTHORITY
 
-use Moose;
+use Moose qw( has extends around ); 
 use namespace::autoclean;
 
 extends 'Net::API::RPX::Exception';
