@@ -313,7 +313,7 @@ This method returns information about the identifiers associated with a user.
 
 =head2 C<api_key>
 
-This is the api_key provided by Janrain to interface with RPX. You will need to signup to RPX
+This is the api_key provided by Janrain to interface with RPX. You will need to sign up to RPX
 to get one of these.
 
 =head2 C<base_url>
