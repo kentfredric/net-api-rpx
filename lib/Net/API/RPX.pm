@@ -276,7 +276,7 @@ L<https://rpxnow.com/docs>.
 
 =head1 METHODS
 
-=head2 auth_info
+=head2 C<auth_info>
 
     my $user_data = $rpx->auth_info({ token => $params{token} });
 
@@ -285,7 +285,7 @@ auth_info to verify the authenticity of the token and gain user details.
 
 'token' argument is required, 'extended' argument is optional.
 
-=head2 map
+=head2 C<map>
 
     $rpx->map({ identifier => 'yet.another.open.id', primary_key => 12 });
 
@@ -293,7 +293,7 @@ This method allows you to map more than one 'identifier' to a user.
 
 'identifier' argument is required, 'primary_key' argument is required, 'overwrite' is optional.
 
-=head2 unmap
+=head2 C<unmap>
 
     $rpx->unmap({ identifier => 'yet.another.open.id', primary_key => 12 });
 
@@ -301,7 +301,7 @@ This is the inverse of 'map'.
 
 'identifier' argument is required, 'primary_key' argument is required.
 
-=head2 mappings
+=head2 C<mappings>
 
     my $data = $rpx->mappings({ primary_key => 12 });
 
@@ -311,16 +311,16 @@ This method returns information about the identifiers associated with a user.
 
 =head1 ATTRIBUTES
 
-=head2 api_key
+=head2 C<api_key>
 
 This is the api_key provided by Janrain to interface with RPX. You will need to signup to RPX
 to get one of these.
 
-=head2 base_url
+=head2 C<base_url>
 
 This is the base URL that is used to make API calls against. It defaults to the RPX v2 API.
 
-=head2 ua
+=head2 C<ua>
 
 This is a LWP::UserAgent object. You may override it if you require more fine grain control
 over remote queries.
