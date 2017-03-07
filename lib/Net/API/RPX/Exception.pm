@@ -6,7 +6,7 @@ package Net::API::RPX::Exception;
 
 # ABSTRACT: A Base class for Net::API::RPX exceptions.
 
-our $VERSION = '1.000001';
+our $VERSION = '1.000002';
 
 our $AUTHORITY = 'cpan:KONOBI'; # AUTHORITY
 
@@ -34,7 +34,7 @@ Net::API::RPX::Exception - A Base class for Net::API::RPX exceptions.
 
 =head1 VERSION
 
-version 1.000001
+version 1.000002
 
 =head1 AUTHORS
 

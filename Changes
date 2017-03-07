@@ -1,5 +1,7 @@
 Revision history for Net-API-RPX
 
+1.000002 2017-03-07T15:16:20Z d2b0cfc
+
 1.000001 2017-03-07T15:14:16Z 2f2a14f
  - Bugfix: Avoid test failures due to -Ddefault_inc_excludes_dot
 

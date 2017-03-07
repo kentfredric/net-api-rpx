@@ -25,19 +25,19 @@ name: Net-API-RPX
 provides:
   Net::API::RPX:
     file: lib/Net/API/RPX.pm
-    version: '1.000001'
+    version: '1.000002'
   Net::API::RPX::Exception:
     file: lib/Net/API/RPX/Exception.pm
-    version: '1.000001'
+    version: '1.000002'
   Net::API::RPX::Exception::Network:
     file: lib/Net/API/RPX/Exception/Network.pm
-    version: '1.000001'
+    version: '1.000002'
   Net::API::RPX::Exception::Service:
     file: lib/Net/API/RPX/Exception/Service.pm
-    version: '1.000001'
+    version: '1.000002'
   Net::API::RPX::Exception::Usage:
     file: lib/Net/API/RPX/Exception/Usage.pm
-    version: '1.000001'
+    version: '1.000002'
 recommends:
   Moose: '2.000'
 requires:
@@ -55,4 +55,4 @@ resources:
   bugtracker: https://github.com/kentnl/Net-API-RPX/issues
   homepage: https://github.com/kentnl/Net-API-RPX
   repository: https://github.com/kentnl/Net-API-RPX.git
-version: '1.000001'
+version: '1.000002'
