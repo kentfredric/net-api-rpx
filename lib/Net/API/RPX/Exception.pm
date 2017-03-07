@@ -52,7 +52,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2015 by Cloudtone Studios.
+This software is Copyright (c) 2017 by Cloudtone Studios.
 
 This is free software, licensed under:
 
