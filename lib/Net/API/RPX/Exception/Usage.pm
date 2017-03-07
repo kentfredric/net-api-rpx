@@ -6,7 +6,7 @@ package Net::API::RPX::Exception::Usage;
 
 # ABSTRACT: For when the interface is used wrongly
 
-our $VERSION = '1.000001';
+our $VERSION = '1.000002';
 
 # AUTHORITY
 
