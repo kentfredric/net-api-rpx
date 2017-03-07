@@ -1,2 +1,3 @@
-.build
-Net-API-RPX-*
+/.build
+/Net-API-RPX-*
+/tmp/

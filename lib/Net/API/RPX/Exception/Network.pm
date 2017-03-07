@@ -6,7 +6,7 @@ package Net::API::RPX::Exception::Network;
 
 # ABSTRACT: A Class of exceptions for network connectivity issues.
 
-our $VERSION = '1.000000';
+our $VERSION = '1.000001';
 
 our $AUTHORITY = 'cpan:KONOBI'; # AUTHORITY
 
@@ -34,7 +34,7 @@ Net::API::RPX::Exception::Network - A Class of exceptions for network connectivi
 
 =head1 VERSION
 
-version 1.000000
+version 1.000001
 
 =head1 AUTHORS
 
@@ -52,7 +52,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2015 by Cloudtone Studios.
+This software is Copyright (c) 2017 by Cloudtone Studios.
 
 This is free software, licensed under:
 
